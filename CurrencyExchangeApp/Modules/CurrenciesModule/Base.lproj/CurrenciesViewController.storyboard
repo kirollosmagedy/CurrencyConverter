@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Currencies View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CurrenciesViewController" customModule="CurrencyExchangeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HfR-5t-zbQ">
+                                <rect key="frame" x="0.0" y="174" width="414" height="688"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ETO-Hi-DIo">
+                                <rect key="frame" x="0.0" y="44" width="414" height="130"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fS0-LE-9NF">
+                                        <rect key="frame" x="142" y="20" width="130" height="90"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="PSr-FD-b63">
+                                                <rect key="frame" x="20" y="20" width="90" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEs-sy-JiB">
+                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                        <fontDescription key="fontDescription" name=".SFNS-Regular" family=".AppleSystemUIFont" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xP-Er-7Bi">
+                                                        <rect key="frame" x="53" y="0.0" width="37" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="USD">
+                                                                <attributes>
+                                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                    <font key="NSFont" metaFont="system" size="18"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="PSr-FD-b63" firstAttribute="centerY" secondItem="fS0-LE-9NF" secondAttribute="centerY" id="B55-i2-bPc"/>
+                                            <constraint firstItem="PSr-FD-b63" firstAttribute="leading" secondItem="fS0-LE-9NF" secondAttribute="leading" constant="20" id="dvx-mw-131"/>
+                                            <constraint firstItem="PSr-FD-b63" firstAttribute="centerX" secondItem="fS0-LE-9NF" secondAttribute="centerX" id="kvp-WN-wca"/>
+                                            <constraint firstAttribute="bottom" secondItem="PSr-FD-b63" secondAttribute="bottom" constant="20" id="rrs-7O-Ny7"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="fS0-LE-9NF" firstAttribute="centerX" secondItem="ETO-Hi-DIo" secondAttribute="centerX" id="Eix-Vg-TN5"/>
+                                    <constraint firstAttribute="bottom" secondItem="fS0-LE-9NF" secondAttribute="bottom" constant="20" id="Ogo-mf-Ee2"/>
+                                    <constraint firstItem="fS0-LE-9NF" firstAttribute="centerY" secondItem="ETO-Hi-DIo" secondAttribute="centerY" id="bHt-rL-qg1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ETO-Hi-DIo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9fH-AO-AMv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HfR-5t-zbQ" secondAttribute="bottom" id="D0q-jT-XbE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ETO-Hi-DIo" secondAttribute="trailing" id="VLT-CD-c6u"/>
+                            <constraint firstItem="HfR-5t-zbQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="b6g-1b-JsO"/>
+                            <constraint firstItem="ETO-Hi-DIo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ilR-bw-dxl"/>
+                            <constraint firstItem="HfR-5t-zbQ" firstAttribute="top" secondItem="ETO-Hi-DIo" secondAttribute="bottom" id="kpe-o9-LxU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HfR-5t-zbQ" secondAttribute="trailing" id="ujs-7P-hx6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="flagLbl" destination="oEs-sy-JiB" id="tZJ-Mu-NZi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+    </scenes>
+</document>
