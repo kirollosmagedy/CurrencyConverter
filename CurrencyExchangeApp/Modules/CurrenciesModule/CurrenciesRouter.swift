@@ -24,7 +24,7 @@ class CurrenciesRouter: CurrenciesRouterProtocol {
             self.viewController?.present(vc, animated: false)
         case .calculator( let selectedCurrency,let factor,let currentCurrent):
             let vc = CurrencyConverterRouter.assemble(selectedCurrency: selectedCurrency, factor: factor, currentCurrent: currentCurrent)
-            self.viewController?.present(vc, animated: false)
+            self.viewController?.present(vc, animated: true)
         case .dismiss:
             break
         }

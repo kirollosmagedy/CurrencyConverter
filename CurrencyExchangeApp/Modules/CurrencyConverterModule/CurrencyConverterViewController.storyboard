@@ -34,9 +34,9 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9QJ-HP-7hK">
-                                <rect key="frame" x="0.0" y="330" width="414" height="2"/>
-                                <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9QJ-HP-7hK">
+                                <rect key="frame" x="40" y="330" width="334" height="2"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="VHe-EE-3LX"/>
                                 </constraints>
@@ -72,17 +72,27 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency Converter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJX-nt-LaF">
+                                <rect key="frame" x="114" y="74" width="186.5" height="26.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="LX1-aT-jNH" firstAttribute="trailing" secondItem="U7o-h5-85T" secondAttribute="trailing" constant="40" id="4ee-mY-4MF"/>
                             <constraint firstItem="35z-Sl-jcz" firstAttribute="top" secondItem="LX1-aT-jNH" secondAttribute="top" constant="10" id="6ga-qk-wBC"/>
+                            <constraint firstItem="jJX-nt-LaF" firstAttribute="top" secondItem="LX1-aT-jNH" secondAttribute="top" constant="30" id="9xF-vG-ltm"/>
                             <constraint firstItem="9QJ-HP-7hK" firstAttribute="top" secondItem="U7o-h5-85T" secondAttribute="bottom" constant="50" id="BxF-Fz-2Xm"/>
+                            <constraint firstItem="jJX-nt-LaF" firstAttribute="centerX" secondItem="moX-lL-MNx" secondAttribute="centerX" id="CF3-LO-zo7"/>
                             <constraint firstItem="Ypi-nf-pYr" firstAttribute="top" secondItem="9QJ-HP-7hK" secondAttribute="bottom" constant="50" id="CkJ-Wm-52S"/>
                             <constraint firstItem="Ypi-nf-pYr" firstAttribute="leading" secondItem="U7o-h5-85T" secondAttribute="leading" id="FS4-Z3-Yfc"/>
                             <constraint firstItem="Ypi-nf-pYr" firstAttribute="trailing" secondItem="U7o-h5-85T" secondAttribute="trailing" id="RKl-se-mGA"/>
                             <constraint firstItem="U7o-h5-85T" firstAttribute="top" secondItem="LX1-aT-jNH" secondAttribute="top" constant="200" id="ZUT-cH-t2w"/>
                             <constraint firstItem="U7o-h5-85T" firstAttribute="leading" secondItem="LX1-aT-jNH" secondAttribute="leading" constant="40" id="beQ-YZ-lVm"/>
+                            <constraint firstItem="9QJ-HP-7hK" firstAttribute="leading" secondItem="U7o-h5-85T" secondAttribute="leading" id="fgS-b6-43h"/>
+                            <constraint firstItem="9QJ-HP-7hK" firstAttribute="trailing" secondItem="U7o-h5-85T" secondAttribute="trailing" id="hh8-7j-oer"/>
                             <constraint firstItem="LX1-aT-jNH" firstAttribute="trailing" secondItem="35z-Sl-jcz" secondAttribute="trailing" constant="10" id="nbb-7p-UDW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LX1-aT-jNH"/>
