@@ -10,11 +10,11 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class CurrencySelectorViewModel {
+class CurrencySelectorViewModel: CurrencySelectorViewModelProtcol {
     var rates = BehaviorSubject<[String]>(value: [])
     var selectedCountryCode: BehaviorSubject<String>
-    let router: CurrencySelectorRouter
-    init(selectedCountryCode: BehaviorSubject<String>, router: CurrencySelectorRouter) {
+    let router: CurrencySelectorRouterProtcol
+    init(selectedCountryCode: BehaviorSubject<String>, router: CurrencySelectorRouterProtcol) {
         self.selectedCountryCode = selectedCountryCode
         self.router = router
     }

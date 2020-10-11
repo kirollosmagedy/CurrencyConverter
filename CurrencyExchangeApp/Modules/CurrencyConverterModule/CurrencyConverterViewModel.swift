@@ -9,14 +9,14 @@
 import Foundation
 
 
-class CurrencyConverterViewModel {
+class CurrencyConverterViewModel: CurrencyConverterViewModelProtocol {
 
     let currentCurrent : String
     let currency: String
     let value: Double
-    let router: CurrencyConverterRouter
+    let router: CurrencyConverterRouterProtocol
     
-    init(currency: String, value: Double, currentCurrent:  String , router: CurrencyConverterRouter) {
+    init(currency: String, value: Double, currentCurrent:  String , router: CurrencyConverterRouterProtocol) {
         self.currency = currency
         self.value = value
         self.router = router

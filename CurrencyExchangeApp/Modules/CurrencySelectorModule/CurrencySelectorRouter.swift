@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-class CurrencySelectorRouter {
+class CurrencySelectorRouter: CurrencySelectorRouterProtcol {
     weak var viewController: CurrencySelectorViewController!
     
     static func assemble(rates: [String], selectedCountryCode: BehaviorSubject<String>) -> UIViewController {

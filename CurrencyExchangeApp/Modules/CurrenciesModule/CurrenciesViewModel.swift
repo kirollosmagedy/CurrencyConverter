@@ -10,14 +10,13 @@ import Foundation
 import RxSwift
 import Action
 
-class CurrenciesViewModel {
-    
+class CurrenciesViewModel: CurrenciesViewModelProtocol {
     
     var rates = BehaviorSubject<[String: Double]>(value: [:])
     var errorSubject = PublishSubject<Error>()
     var currencyCode = BehaviorSubject<String>(value: "EUR")
     let disposeBag = DisposeBag()
-    var router: CurrenciesRouter!
+    var router: CurrenciesRouterProtocol!
     func getLatestCurrencies(base: String) {
         let observable: Observable<CurrenciesBaseResponse> = BaseApiClient.executeRequest(api: .latest(base: base))
         observable.subscribe(onNext: { [weak self] (response) in

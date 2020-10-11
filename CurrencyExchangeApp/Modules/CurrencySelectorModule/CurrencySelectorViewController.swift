@@ -10,14 +10,14 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class CurrencySelectorViewController: UIViewController {
+class CurrencySelectorViewController: UIViewController,CurrencySelectorViewControllerProtcol {
 
     @IBOutlet weak var currenciesTableView: UITableView! {
         didSet {
             registerCell()
         }
     }
-    var viewModel: CurrencySelectorViewModel!
+    var viewModel: CurrencySelectorViewModelProtcol!
     let disposeBag = DisposeBag()
  
     override func viewDidAppear(_ animated: Bool) {

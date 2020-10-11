@@ -9,7 +9,7 @@
 import UIKit
 import RxSwift
 
-class CurrencyConverterViewController: UIViewController {
+class CurrencyConverterViewController: UIViewController, CurrencyConverterViewControllerProtocol {
 
     @IBOutlet weak var currencyInputTF: UITextField!
     @IBOutlet weak var currencyInputCodeLbl: UILabel!
@@ -17,7 +17,7 @@ class CurrencyConverterViewController: UIViewController {
     @IBOutlet weak var resultCodeLbl: UILabel!
     @IBOutlet weak var closeBtn: UIButton!
     
-    var viewModel: CurrencyConverterViewModel!
+    var viewModel: CurrencyConverterViewModelProtocol!
     let disposeBag = DisposeBag()
     
     private var numbFormatter: NumberFormatter {
@@ -26,10 +26,9 @@ class CurrencyConverterViewController: UIViewController {
         return numbFormatter
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.resignFirstResponder()
+        self.currencyInputTF.resignFirstResponder()
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewDidLoad() {
         currencyInputCodeLbl.text = self.viewModel.currentCurrent
         currencyInputTF.text = "1"
         self.currencyInputTF.rx.text.subscribe(onNext: { [weak self] (input) in
@@ -42,5 +41,10 @@ class CurrencyConverterViewController: UIViewController {
             guard let self = self else  { return }
             self.viewModel.goBack()
         }).disposed(by: disposeBag)
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        currencyInputTF.becomeFirstResponder()
     }
 }

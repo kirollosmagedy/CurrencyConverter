@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class CurrencyConverterRouter {
+class CurrencyConverterRouter: CurrencyConverterRouterProtocol {
     
     weak var viewController: CurrencyConverterViewController!
     

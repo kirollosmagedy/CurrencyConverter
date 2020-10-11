@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxGesture
 
-class CurrenciesViewController: UIViewController {
+class CurrenciesViewController: UIViewController , CurrenciesViewControllerProtocol {
 
     @IBOutlet weak var flagLbl: UILabel!
     @IBOutlet weak var CurrencyTitleLbl: UILabel!
@@ -22,7 +22,7 @@ class CurrenciesViewController: UIViewController {
         }
     }
     let disposeBag = DisposeBag()
-    var viewModel = CurrenciesViewModel()
+    var viewModel: CurrenciesViewModelProtocol = CurrenciesViewModel()
     
     private var numbFormatter: NumberFormatter {
         let numbFormatter = NumberFormatter()

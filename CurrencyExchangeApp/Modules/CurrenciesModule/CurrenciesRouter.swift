@@ -10,10 +10,10 @@ import Foundation
 
 
 
-class CurrenciesRouter {
-    weak var viewController: CurrenciesViewController?
+class CurrenciesRouter: CurrenciesRouterProtocol {
+    weak var viewController: CurrenciesViewControllerProtocol?
    
-    init(viewController: CurrenciesViewController) {
+    init(viewController: CurrenciesViewControllerProtocol) {
         self.viewController = viewController
     }
     

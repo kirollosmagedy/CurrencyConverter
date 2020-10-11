@@ -30,6 +30,9 @@
 		48006F09253287FF00FBB7D8 /* CurrencyConverterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48006F08253287FF00FBB7D8 /* CurrencyConverterViewController.storyboard */; };
 		48006F0B25328C7700FBB7D8 /* CurrencyConverterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48006F0A25328C7700FBB7D8 /* CurrencyConverterViewModel.swift */; };
 		48006F0D25328C8300FBB7D8 /* CurrencyConverterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48006F0C25328C8300FBB7D8 /* CurrencyConverterRouter.swift */; };
+		48006F0F253296A800FBB7D8 /* CurrenciesContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48006F0E253296A800FBB7D8 /* CurrenciesContract.swift */; };
+		48006F112532986F00FBB7D8 /* CurrencyConverterContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48006F102532986F00FBB7D8 /* CurrencyConverterContract.swift */; };
+		48006F132532999E00FBB7D8 /* CurrencySelectorContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48006F122532999E00FBB7D8 /* CurrencySelectorContract.swift */; };
 		480B8E922532207C004E5064 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480B8E912532207C004E5064 /* AppDelegate.swift */; };
 		480B8E942532207C004E5064 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480B8E932532207C004E5064 /* SceneDelegate.swift */; };
 		480B8E962532207C004E5064 /* CurrenciesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480B8E952532207C004E5064 /* CurrenciesViewController.swift */; };
@@ -61,6 +64,9 @@
 		48006F08253287FF00FBB7D8 /* CurrencyConverterViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CurrencyConverterViewController.storyboard; sourceTree = "<group>"; };
 		48006F0A25328C7700FBB7D8 /* CurrencyConverterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverterViewModel.swift; sourceTree = "<group>"; };
 		48006F0C25328C8300FBB7D8 /* CurrencyConverterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverterRouter.swift; sourceTree = "<group>"; };
+		48006F0E253296A800FBB7D8 /* CurrenciesContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesContract.swift; sourceTree = "<group>"; };
+		48006F102532986F00FBB7D8 /* CurrencyConverterContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverterContract.swift; sourceTree = "<group>"; };
+		48006F122532999E00FBB7D8 /* CurrencySelectorContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySelectorContract.swift; sourceTree = "<group>"; };
 		480B8E8E2532207C004E5064 /* CurrencyExchangeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyExchangeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		480B8E912532207C004E5064 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		480B8E932532207C004E5064 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +156,7 @@
 		48006EF025326D5B00FBB7D8 /* CurrencySelectorModule */ = {
 			isa = PBXGroup;
 			children = (
+				48006F122532999E00FBB7D8 /* CurrencySelectorContract.swift */,
 				48006F00253271A300FBB7D8 /* CurrencySelectorRouter.swift */,
 				48006EF125326DB600FBB7D8 /* CurrencySelectorViewController.swift */,
 				48006EF325326DD500FBB7D8 /* CurrencySelectorViewController.storyboard */,
@@ -245,6 +252,7 @@
 				480B8E972532207C004E5064 /* CurrenciesViewController.storyboard */,
 				48006EE2253249CE00FBB7D8 /* CurrenciesViewModel.swift */,
 				48006F02253276F600FBB7D8 /* CurrenciesRouter.swift */,
+				48006F0E253296A800FBB7D8 /* CurrenciesContract.swift */,
 				48006EEF25325E5B00FBB7D8 /* Cells */,
 			);
 			path = CurrenciesModule;
@@ -257,6 +265,7 @@
 				48006F08253287FF00FBB7D8 /* CurrencyConverterViewController.storyboard */,
 				48006F0A25328C7700FBB7D8 /* CurrencyConverterViewModel.swift */,
 				48006F0C25328C8300FBB7D8 /* CurrencyConverterRouter.swift */,
+				48006F102532986F00FBB7D8 /* CurrencyConverterContract.swift */,
 			);
 			path = CurrencyConverterModule;
 			sourceTree = "<group>";
@@ -404,7 +413,10 @@
 				48006EDC2532443500FBB7D8 /* FixerProvider.swift in Sources */,
 				48006F01253271A300FBB7D8 /* CurrencySelectorRouter.swift in Sources */,
 				48006EDE253246B100FBB7D8 /* Dict+Extension.swift in Sources */,
+				48006F0F253296A800FBB7D8 /* CurrenciesContract.swift in Sources */,
+				48006F112532986F00FBB7D8 /* CurrencyConverterContract.swift in Sources */,
 				48006EFE25326F1800FBB7D8 /* CurrencySelectorTableViewCell.swift in Sources */,
+				48006F132532999E00FBB7D8 /* CurrencySelectorContract.swift in Sources */,
 				480B8E942532207C004E5064 /* SceneDelegate.swift in Sources */,
 				48006F07253287E200FBB7D8 /* CurrencyConverterViewController.swift in Sources */,
 				48006F03253276F600FBB7D8 /* CurrenciesRouter.swift in Sources */,
