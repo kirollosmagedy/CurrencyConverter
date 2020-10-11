@@ -54,3 +54,7 @@ enum FixerParams: String {
     case access_key
     case base
 }
+
+enum FixerError: Error {
+    case generalError
+}

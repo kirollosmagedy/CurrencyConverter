@@ -10,4 +10,5 @@ target 'CurrencyExchangeApp' do
     pod 'RxCocoa'
     pod 'Moya/RxSwift'
     pod 'Action'
+    pod 'RxGesture'
 end

@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HfR-5t-zbQ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HfR-5t-zbQ">
                                 <rect key="frame" x="0.0" y="174" width="414" height="688"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
@@ -30,7 +30,7 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEs-sy-JiB">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                        <fontDescription key="fontDescription" name=".SFNS-Regular" family=".AppleSystemUIFont" pointSize="18"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -67,12 +67,19 @@
                                     <constraint firstItem="fS0-LE-9NF" firstAttribute="centerY" secondItem="ETO-Hi-DIo" secondAttribute="centerY" id="bHt-rL-qg1"/>
                                 </constraints>
                             </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="CGh-gM-WZI">
+                                <rect key="frame" x="188.5" y="434.5" width="37" height="37"/>
+                                <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="color" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="CGh-gM-WZI" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="7Q6-n9-79A"/>
                             <constraint firstItem="ETO-Hi-DIo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9fH-AO-AMv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HfR-5t-zbQ" secondAttribute="bottom" id="D0q-jT-XbE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ETO-Hi-DIo" secondAttribute="trailing" id="VLT-CD-c6u"/>
+                            <constraint firstItem="CGh-gM-WZI" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Vo4-h0-20d"/>
                             <constraint firstItem="HfR-5t-zbQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="b6g-1b-JsO"/>
                             <constraint firstItem="ETO-Hi-DIo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ilR-bw-dxl"/>
                             <constraint firstItem="HfR-5t-zbQ" firstAttribute="top" secondItem="ETO-Hi-DIo" secondAttribute="bottom" id="kpe-o9-LxU"/>
@@ -81,7 +88,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="CurrencyTitleLbl" destination="9xP-Er-7Bi" id="gn2-Zh-fPg"/>
+                        <outlet property="currencyTableView" destination="HfR-5t-zbQ" id="Hut-Ji-noG"/>
                         <outlet property="flagLbl" destination="oEs-sy-JiB" id="tZJ-Mu-NZi"/>
+                        <outlet property="loadingIndicator" destination="CGh-gM-WZI" id="kef-Co-gVy"/>
+                        <outlet property="selectedCurrencyView" destination="fS0-LE-9NF" id="hqJ-FM-4kQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class BaseModel: Codable {
-    let sucess: Bool?
-    let timeStamp: Int?
+protocol BaseModel: Codable {
+    var success: Bool? { get set }
+    var timeStamp: Int? { get set }
 }

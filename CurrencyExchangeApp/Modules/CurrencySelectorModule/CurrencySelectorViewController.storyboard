@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Currency Selector View Controller-->
+        <scene sceneID="0tJ-QK-BBg">
+            <objects>
+                <viewController storyboardIdentifier="CurrencySelectorViewController" id="o6W-fJ-mhs" customClass="CurrencySelectorViewController" customModule="CurrencyExchangeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Neb-DT-ghT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g7b-Fa-Sxt">
+                                <rect key="frame" x="0.0" y="126.5" width="414" height="735.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select one of the following currency" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogV-Mf-NLM">
+                                <rect key="frame" x="5" y="54" width="404" height="67.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="QTw-mb-4pS" firstAttribute="trailing" secondItem="g7b-Fa-Sxt" secondAttribute="trailing" id="953-zE-r4T"/>
+                            <constraint firstItem="ogV-Mf-NLM" firstAttribute="leading" secondItem="QTw-mb-4pS" secondAttribute="leading" constant="5" id="D1I-dd-Ind"/>
+                            <constraint firstItem="ogV-Mf-NLM" firstAttribute="top" secondItem="QTw-mb-4pS" secondAttribute="top" constant="10" id="Eeo-6u-cFs"/>
+                            <constraint firstItem="g7b-Fa-Sxt" firstAttribute="leading" secondItem="QTw-mb-4pS" secondAttribute="leading" id="Jij-K1-gpI"/>
+                            <constraint firstItem="g7b-Fa-Sxt" firstAttribute="top" secondItem="ogV-Mf-NLM" secondAttribute="bottom" constant="5" id="Lug-Va-rgQ"/>
+                            <constraint firstItem="QTw-mb-4pS" firstAttribute="bottom" secondItem="g7b-Fa-Sxt" secondAttribute="bottom" id="dSn-Ck-DLl"/>
+                            <constraint firstItem="QTw-mb-4pS" firstAttribute="trailing" secondItem="ogV-Mf-NLM" secondAttribute="trailing" constant="5" id="gdh-Jq-hil"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QTw-mb-4pS"/>
+                    </view>
+                    <connections>
+                        <outlet property="currenciesTableView" destination="g7b-Fa-Sxt" id="cYK-7k-w9q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Bl-W7-AP1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="94" y="83"/>
+        </scene>
+    </scenes>
+</document>

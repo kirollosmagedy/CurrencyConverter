@@ -10,5 +10,7 @@ import Foundation
 
 
 class CurrenciesBaseResponse: BaseModel {
-    var rates = [String: Double]()
+    var success: Bool?
+    var timeStamp: Int?
+    var rates: [String: Double]?
 }

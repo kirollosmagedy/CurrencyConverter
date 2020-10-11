@@ -11,10 +11,28 @@ import RxSwift
 import Action
 
 class CurrenciesViewModel {
-    func getLatestCurrencies(base: String) -> Action<Void, CurrenciesBaseResponse>  {
-        return Action { () -> Observable<CurrenciesBaseResponse> in
-            return BaseApiClient.executeRequest(api: .latest(base: base))
+    
+    
+    var rates = BehaviorSubject<[String: Double]>(value: [:])
+    var errorSubject = PublishSubject<Error>()
+    var currencyCode = BehaviorSubject<String>(value: "EUR")
+    let disposeBag = DisposeBag()
+    var router: CurrenciesRouter!
+    func getLatestCurrencies(base: String) {
+        let observable: Observable<CurrenciesBaseResponse> = BaseApiClient.executeRequest(api: .latest(base: base))
+        observable.subscribe(onNext: { [weak self] (response) in
+            self?.rates.onNext(response.rates ?? [:])
+            }, onError: { [weak self] (error) in
+                self?.errorSubject.onNext(error)
+        }).disposed(by: disposeBag)
+    }
+    
+    func goToCurrencySelector() {
+        let keys = try? rates.value().map { (dic) in
+            dic.key
         }
+        
+        router.go(to: .currencySelector(rates: keys ?? [], currencyBehaviorSubject: currencyCode))
     }
 }
 

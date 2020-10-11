@@ -11,6 +11,9 @@ PODS:
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
+  - RxGesture (3.0.2):
+    - RxCocoa (~> 5.1)
+    - RxSwift (~> 5.1)
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
@@ -19,6 +22,7 @@ DEPENDENCIES:
   - Action
   - Moya/RxSwift
   - RxCocoa
+  - RxGesture
   - RxSwift
 
 SPEC REPOS:
@@ -27,6 +31,7 @@ SPEC REPOS:
     - Alamofire
     - Moya
     - RxCocoa
+    - RxGesture
     - RxRelay
     - RxSwift
 
@@ -35,9 +40,10 @@ SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxGesture: d6bd7447ca3a596c7a9702a6a2b6a2bb5d8bae54
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
 
-PODFILE CHECKSUM: c5d77a3b73249f665a68908fbd36dc41724a4adc
+PODFILE CHECKSUM: 04af8e592c86a9da3523f2698f8e27298adfb522
 
 COCOAPODS: 1.8.4
