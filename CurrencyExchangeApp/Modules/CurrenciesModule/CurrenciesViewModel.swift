@@ -31,8 +31,11 @@ class CurrenciesViewModel {
         let keys = try? rates.value().map { (dic) in
             dic.key
         }
-        
         router.go(to: .currencySelector(rates: keys ?? [], currencyBehaviorSubject: currencyCode))
+    }
+    func goToCurrenctCalcuator(currency: String, value: Double) {
+        guard let val = try? self.currencyCode.value() else { return }
+        router.go(to: .calculator(selectedCurrency: currency, factor: value, currentCurrent:val))
     }
 }
 

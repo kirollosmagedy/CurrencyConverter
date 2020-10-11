@@ -11,6 +11,6 @@ import RxSwift
 
 enum Destination {
     case currencySelector(rates: [String], currencyBehaviorSubject: BehaviorSubject<String> )
-    case calculator
+    case calculator (selectedCurrency: String, factor: Double, currentCurrent: String)
     case dismiss
 }

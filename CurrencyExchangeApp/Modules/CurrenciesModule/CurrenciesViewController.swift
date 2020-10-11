@@ -70,6 +70,10 @@ class CurrenciesViewController: UIViewController {
             cell.flagLbl.text = countryCode.flag()
             cell.currencyLbl.text = item.key
             cell.currencyValue.text = self?.numbFormatter.string(from: NSNumber(value: item.value))
+            cell.rx.tapGesture().when(.recognized).subscribe(onNext: { (_) in
+                guard let self = self , let value = try? self.viewModel.rates.value()[item.key] else { return }
+                self.viewModel.goToCurrenctCalcuator(currency:item.key , value: value)
+            }).disposed(by: cell.disposeBag)
         }.disposed(by: disposeBag)
         
         viewModel.currencyCode.subscribe(onNext: { [weak self] (currencyCode) in
